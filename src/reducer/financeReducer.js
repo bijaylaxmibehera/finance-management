@@ -52,6 +52,33 @@ export const financeReducer = (state = initialState, action) => {
         ...state,
         loading: true
       }
+    case 'ADD_ENTRY_FAILURE':
+        return {
+            ...state,
+            loading:false,
+            error:'Error adding entry data'
+        }
+    case 'ADD_INCOME_SUCCESS':
+        return {
+            ...state,
+            income:[...state.income, action.payload],
+            loading:false,
+            error:null
+        }
+    case 'ADD_EXPENSE_SUCCESS':
+        return {
+            ...state,
+            expenses:[...state.expenses, action.payload],
+            loading:false,
+            error:null
+        }
+    case 'ADD_SAVING_SUCCESS':
+        return {
+            ...state,
+            savings:[...state.savings, action.payload],
+            loading:false,
+            error:null
+        }
     default:
       return state
   }
