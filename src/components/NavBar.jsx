@@ -12,6 +12,7 @@ export const NavBar=()=>{
             <NavLink to="/income" className="hover:font-medium" style={getStyle}>Income</NavLink>
             <NavLink to="/expenses" className="hover:font-medium" style={getStyle}>Expenses</NavLink>
             <NavLink to="/savings" className="hover:font-medium" style={getStyle}>Savings</NavLink>
+            <NavLink to="/dashboard" className="hover:font-medium" style={getStyle}>Dashboard</NavLink>
         </nav>
     )
 }

@@ -1,5 +1,5 @@
 export const initialState = {
-  income: [],
+  incomes: [],
   expenses: [],
   savings: [],
   loading: false,
@@ -11,7 +11,7 @@ export const financeReducer = (state = initialState, action) => {
     case 'FETCH_INCOME_SUCCESS':
       return {
         ...state,
-        income: action.payload,
+        incomes: action.payload,
         loading: false,
         error: null
       }
@@ -61,7 +61,7 @@ export const financeReducer = (state = initialState, action) => {
     case 'ADD_INCOME_SUCCESS':
         return {
             ...state,
-            income:[...state.income, action.payload],
+            incomes:[...state.incomes, action.payload],
             loading:false,
             error:null
         }

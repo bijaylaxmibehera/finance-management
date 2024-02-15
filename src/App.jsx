@@ -4,6 +4,7 @@ import { IncomeExpenseFrom } from './pages/IncomeExpenseForm';
 import { Income } from './pages/Income';
 import { Expenses } from './pages/Expenses';
 import { Savings } from './pages/Savings';
+import { Dashboard } from './pages/Dashboard';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path='/income' element={<Income/>}/>
           <Route path='/expenses' element={<Expenses/>}/>
           <Route path='/savings' element={<Savings/>}/>
+          <Route path='/dashboard' element={<Dashboard/>}/>
         </Routes>
       </div>
     </div>
