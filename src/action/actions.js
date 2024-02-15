@@ -43,7 +43,7 @@ export const fetchSavings=()=>async (dispatch)=>{
 
 export const addEntry=(entry)=> async(dispatch)=>{
     try{
-        const response=await fetch(`https://b6c411d5-006b-4ab0-af73-ebbf6d321d2c-00-21004bmf5n05q.pike.replit.dev/add/${entry.type}`,{
+        const response=await fetch(`https://b6c411d5-006b-4ab0-af73-ebbf6d321d2c-00-21004bmf5n05q.pike.replit.dev/add/${entry.entryType}`,{
             method:'POST',
             headers:{
                 'Content-Type':'application/json',
@@ -52,9 +52,9 @@ export const addEntry=(entry)=> async(dispatch)=>{
         });
         const data=await response.json();
         if(data.success===true){
-            if(entry.type==='income'){
+            if(entry.entryType==='income'){
                 dispatch({type:'ADD_INCOME_SUCCESS',payload:data.data})
-            }else if(entry.type==='expense'){
+            }else if(entry.entryType==='expense'){
                 dispatch({type:'ADD_EXPENSE_SUCCESS',payload:data.data})
             }else{
                 dispatch({type:'ADD_SAVING_SUCCESS',payload:data.data})
