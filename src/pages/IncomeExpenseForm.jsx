@@ -7,6 +7,7 @@ export const IncomeExpenseFrom = () => {
   const initialState = {
     description: "",
     amount: 0,
+    category:"",
     entryType: "income",
   };
   const [formData, setFormData] = useState(initialState);
@@ -41,6 +42,17 @@ export const IncomeExpenseFrom = () => {
             value={formData.amount}
             required
             name="amount"
+            onChange={handleChange}
+            className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+          />
+        </div>
+        <div>
+        <label className="block text-sm font-bold mb-2">Category:</label>
+          <input
+            type="text"
+            value={formData.category}
+            required
+            name="category"
             onChange={handleChange}
             className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
           />
